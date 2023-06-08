@@ -1,5 +1,5 @@
-function teste(): Object {
-  return { ok: true };
+function teste(): number {
+  return 1;
 }
 const response = teste();
 console.log('count: %d', response);

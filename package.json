@@ -4,11 +4,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts":[
+      "eslint 'src/**' --fix",
+      "npm run test:staged",
+      "git add"
+    ]
+  },
   "scripts": {
     "test": "jest",
     "test:staged": "jest",
     "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +33,7 @@
     "@typescript-eslint/parser": "^5.59.9",
     "eslint": "^8.42.0",
     "git-commit-msg-linter": "^5.0.4",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "jest": "^29.5.0",
     "lint-staged": "^13.2.2",
     "ts-jest": "^29.1.0",

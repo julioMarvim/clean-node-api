@@ -10,10 +10,9 @@
     }
   },
   "lint-staged": {
-    "*.ts":[
-      "eslint 'src/**' --fix",
-      "npm run test:staged",
-      "git add"
+    "*.ts": [
+      "eslint . --fix",
+      "npm run test:staged"
     ]
   },
   "scripts": {

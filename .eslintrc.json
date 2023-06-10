@@ -21,17 +21,10 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        "@typescript-eslint/no-explicit-any": "off",
+        "indent": [ "error", "tab" ],
+        "quotes": [ "error", "single"],
+        "semi": [ "error", "always" ],
+        "object-curly-spacing": [ "error", "always" ]
     }
 }

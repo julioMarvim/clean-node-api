@@ -1,7 +1,7 @@
 import { SignUpController } from './signup';
 
 describe('SignUp Controller', () => {
-	test('Shoud return 400 if no name is provideed', () => {
+	test('Shoud return 400 if no name is provided', () => {
 		const sut = new SignUpController();
 		const httpRequest = {
 			body: {
@@ -16,7 +16,7 @@ describe('SignUp Controller', () => {
 		expect(httpResponse.body).toEqual(new Error('Missig param: name'));
 	});
 
-	test('Shoud return 400 if no email is provideed', () => {
+	test('Shoud return 400 if no email is provided', () => {
 		const sut = new SignUpController();
 		const httpRequest = {
 			body: {

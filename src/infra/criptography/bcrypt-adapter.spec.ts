@@ -21,8 +21,7 @@ describe('Bcrypt Adapter', () => {
   })
 
   test('Should return a hash on success', async () => {
-    const salt = 12
-    const sut = new BcryptAdapter(salt)
+    const sut = makeSut()
     const hash = await sut.encrypt('any_value')
     expect(hash).toBe('hash')
   })

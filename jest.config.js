@@ -13,5 +13,5 @@ export default {
   transform: {
     '^.+\\.ts$': 'ts-jest'
   },
-  preset: 'ts-jest'
+  preset: '@shelf/jest-mongodb'
 }

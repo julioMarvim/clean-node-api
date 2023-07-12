@@ -170,6 +170,7 @@ describe('SignUp Controller', () => {
         passwordConfirmation: 'any_password'
       }
     }
+    expect.assertions(2)
     const httpResponse = await sut.handle(httpRequest)
 
     expect(httpResponse.statusCode).toBe(500)
@@ -210,6 +211,7 @@ describe('SignUp Controller', () => {
         passwordConfirmation: 'any_password'
       }
     }
+    expect.assertions(2)
     const httpResponse = await sut.handle(httpRequest)
 
     expect(httpResponse.statusCode).toBe(500)
